@@ -1,4 +1,4 @@
-package org.example.Trees;
+package group13_cs4050_assignment3;
 //Auther: Abdelnasser Ouda
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
@@ -46,8 +46,8 @@ public class TreeVisualizerController {
         trees.put("Binary Search Tree", new BinarySearchTree<>());
         //trees.put("AVL Tree", new AVLTree<>());
         //trees.put("Red-Black Tree", new RedBlackTree<>());
-        //trees.put("Min Heap", new MinHeap<>());
-        //trees.put("Max Heap", new MaxHeap<>());
+        trees.put("Min Heap", new MinHeap<>());
+        trees.put("Max Heap", new MaxHeap<>());
         //trees.put("2-4 Tree", new Tree24<>());
         currentTree = trees.get("Binary Search Tree");
     }
