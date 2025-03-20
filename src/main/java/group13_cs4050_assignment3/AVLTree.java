@@ -175,10 +175,23 @@ public class AVLTree<T extends Comparable<T>> implements Tree<T>, Serializable {
         }
     }
 
+    @Override
     public boolean contains(T value) {
-        return false;
+        return contains(root, value);
     }
 
+    private boolean contains(Node node, T value) {
+        if (node == null) {
+            return false;
+        }
+        if (value.compareTo(node.value) == 0) {
+            return true;
+        } else if (value.compareTo(node.value) < 0) {
+            return contains(node.left, value);
+        } else {
+            return contains(node.right, value);
+        }
+    }
     public void clear() {
         this.root = null;
         this.size = 0;
