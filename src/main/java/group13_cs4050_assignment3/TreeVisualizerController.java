@@ -45,7 +45,7 @@ public class TreeVisualizerController {
         trees = new HashMap<>();
         trees.put("Binary Search Tree", new BinarySearchTree<>());
         trees.put("AVL Tree", new AVLTree<>());
-        //trees.put("Red-Black Tree", new RedBlackTree<>());
+        trees.put("Red-Black Tree", new RedBlackTree<>());
         trees.put("Min Heap", new MinHeap<>());
         trees.put("Max Heap", new MaxHeap<>());
         //trees.put("2-4 Tree", new Tree24<>());
@@ -171,7 +171,7 @@ public class TreeVisualizerController {
     }
 
     private void drawNormalTree(GraphicsContext gc, TreeNode<Integer> node, double x, double y, double hSpacing, double vSpacing, int width) {
-        if (currentTree.type() == "RBT")
+        if (currentTree.type() == "RBTree")
             if (node.getColor() == "RED")
                 gc.setFill(Color.RED);
             else
